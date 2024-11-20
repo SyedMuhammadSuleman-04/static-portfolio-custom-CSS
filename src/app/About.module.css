@@ -1,0 +1,106 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center; /* Center all content */
+}
+
+@media (min-width: 640px) {
+  .gridContainer {
+    grid-template-columns: 7fr 5fr;
+    text-align: left; /* Align left for larger screens */
+  }
+}
+
+.textContainer {
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .textContainer {
+    text-align: left;
+    padding: 20px;
+  }
+}
+
+.heading {
+  color: #cbd5e1; /* Slate 200 */
+  font-size: 2rem; /* Increased size */
+  margin-bottom: 1rem;
+  font-weight: 900; /* Bolder text */
+}
+
+@media (min-width: 640px) {
+  .heading {
+    font-size: 2.5rem; /* For larger screens */
+  }
+}
+
+.gradientText {
+  background: linear-gradient(to right, #1e3a8a, #4ade80, #2563eb);
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  color: #a0aec0; /* Slate 300 */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 1rem; /* Increased for better visibility */
+}
+
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start; /* Left-align the buttons */
+}
+
+.hireMeButton,
+.downloadCvButton {
+  padding: 0.5rem 1.3rem;
+  border-radius: 100px;
+  background: linear-gradient(to right, #073d17, #1eb145, #2563eb);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: center; /* Center-align text inside buttons */
+  border: 2px solid #7c3aed;
+}
+
+.downloadCvButton {
+  background-color: transparent; /* Remove black background */
+  border: 2px solid #7c3aed;
+}
+
+.downloadCvSpan {
+  display: block;
+  padding: 0.5rem 1.3rem;
+  border-radius: 90px;
+  background-color: transparent; /* Set background to transparent */
+  color: inherit; /* Ensure it inherits text color from parent */
+}
+
+.profileImageWrapper {
+  background-color: #181818;
+  border-radius: 50%;
+  width: 200px; /* Centered size for mobile */
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto; /* Center image on small screens */
+}
+
+@media (min-width: 1024px) {
+  .profileImageWrapper {
+    width: 400px; /* Reduced size for larger screens */
+    height: 400px;
+    margin: 0; /* Remove auto margin for larger screens */
+  }
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
